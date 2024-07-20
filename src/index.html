@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="main">
+        <div class="sidebar">
+            <form id="todo-form" class="form" action="">
+                <label for="title" class="label">Title</label>
+                <input id="title" class="input" required>
+
+                <label for="description" class="label">Task Description</label>
+                <textarea id="description" class="input" rows="10" cols="50" required></textarea>
+
+                
+                <div class="form-subdiv">
+                    <label for="deadline" class="label">Deadline</label>
+                    <input id="deadline" class="input" type="date" required>
+                </div>
+
+                <div class="form-subdiv">
+                    <label for="priority" class="label">Priority</label>
+                    <select id="priority" class="input" required>
+                        <option value="" disabled selected>Choose priority...</option>
+                        <option value="high">High</option>
+                        <option value="regular">Regular</option>
+                        <option value="low">Low</option>
+                    </select>
+                </div>
+                
+                <div class="form-subdiv">
+                    <label for="category" class="label">Category</label>
+                    <select id="category" class="input select">
+                        <option value="" disabled selected>Choose category...</option>
+                        <option value="none">None</option>
+                    </select>
+                </div>
+
+                <button type="button" class="input submit-btn" id="taskFormBtn">Add Todo</button>
+            </form>
+
+            <div id="category-list" class="category-list">
+                <div class="category-list-subdiv">
+                    <p class="category-title">Category 1</p>
+                    <button id="category-delete-btn" class="category-delete">Delete</button>
+                </div>
+            </div>
+
+            <form id="category-form" class="form">
+                <div class="category-subdiv">
+                    <label for="new-category" class="label">Add Category</label>
+                    <input id="new-category" class="input" type="text" required>
+                </div>
+
+                <button type="button" class="input submit-btn" id="categoryFormBtn">Add Category</button>
+            </form>
+            
+        </div>
+        <div id="content">
+            <div class="filter-container" id="category-filters">
+                <div class="category-div" id="all">
+                    <p>All</p>
+                </div>
+                <div class="category-div" id="none">
+                    <p>Uncategorized</p>
+                </div>
+            </div>
+            <div id="all-content">
+                <div class="task-wrapper">
+                    <div class="todo-container" id="todo-container">
+                        <div class="task-container">
+                            <p class="todo-title">Task 1</p>
+                            <div class="todo-subdiv">
+                                <div class="priority-subdiv">
+                                    <p>Priority: </p>
+                                    <div class="todo-priority red"></div>
+                                </div>
+                                <div class="deadline-subdiv">
+                                    <p>Deadline: </p>
+                                    <p class="todo-deadline">01/01/2024</p>
+                                </div>
+            
+                                <div class="actions-subdiv">
+                                    <svg class="checkmark" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M10.2426 16.3137L6 12.071L7.41421 10.6568L10.2426 13.4853L15.8995 7.8284L17.3137 9.24262L10.2426 16.3137Z" fill="currentColor" /><path fill-rule="evenodd" clip-rule="evenodd" d="M1 12C1 5.92487 5.92487 1 12 1C18.0751 1 23 5.92487 23 12C23 18.0751 18.0751 23 12 23C5.92487 23 1 18.0751 1 12ZM12 21C7.02944 21 3 16.9706 3 12C3 7.02944 7.02944 3 12 3C16.9706 3 21 7.02944 21 12C21 16.9706 16.9706 21 12 21Z" fill="currentColor" /></svg>
+            
+                                    <svg class="delete" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M17 5V4C17 2.89543 16.1046 2 15 2H9C7.89543 2 7 2.89543 7 4V5H4C3.44772 5 3 5.44772 3 6C3 6.55228 3.44772 7 4 7H5V18C5 19.6569 6.34315 21 8 21H16C17.6569 21 19 19.6569 19 18V7H20C20.5523 7 21 6.55228 21 6C21 5.44772 20.5523 5 20 5H17ZM15 4H9V5H15V4ZM17 7H7V18C7 18.5523 7.44772 19 8 19H16C16.5523 19 17 18.5523 17 18V7Z" fill="currentColor" /><path d="M9 9H11V17H9V9Z" fill="currentColor" /><path d="M13 9H15V17H13V9Z" fill="currentColor" /></svg>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="description-container hidden">
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque in soluta dolorum, saepe eveniet laboriosam dolor repellat, officiis a facere beatae tenetur! Excepturi molestias est officiis beatae alias facilis nesciunt mollitia impedit, quidem veritatis temporibus consequatur magnam rerum. Quidem corrupti voluptatem, eius amet deleniti sed vero expedita! Dignissimos, ratione tempore?</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
